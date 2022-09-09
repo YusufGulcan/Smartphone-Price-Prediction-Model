@@ -22,14 +22,20 @@ After the model is tested, it is saved in a .sav file and the save file is used 
 
 [Application](https://yusufgulcan-smartphone-price-prediction-model-deployment-kr4n3c.streamlitapp.com/)
 
+## Bonus:
 
+### Power BI visualization
+I also prepared an interactive dashboard where details of the market can be seen.
 
+[BI Dashboard](https://app.powerbi.com/groups/me/reports/8210a11f-7cff-4325-b1cc-bee902817b99/ReportSection)
+
+### Medium Article 
 If you are interested, you can see my medium post about this project. I explained the steps in detail and my reasoning.
 
 [Medium Article](https://medium.com/p/ad51bf8c45d6)
 
 
-## Libraries
+### Libraries
 - XGBOOST 
 - CATBOOST
 - Pandas
