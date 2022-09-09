@@ -33,7 +33,7 @@ model = pickle.load(open(filename, 'rb'))
 with features:
     brand = st.selectbox(
         'Select Brand:',
-        ('Apple', 'Samsung', 'Huawei', 'Mi', 'Oppo', 'realme', 'Reeder', 'TCL', 'General Mobile','POCO'))
+        ('Apple', 'Samsung', 'Huawei', 'Oppo', 'realme', 'Reeder', 'TCL', 'General Mobile','POCO'))
 
     CPU = st.selectbox(
         'Select CPU -Ghz-:',
