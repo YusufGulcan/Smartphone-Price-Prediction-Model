@@ -33,7 +33,7 @@ model = pickle.load(open(filename, 'rb'))
 with features:
     brand = st.selectbox(
         'Select Brand:',
-        ('Apple', 'Samsung', 'Huawei', 'Mi', 'Oppo', 'Realme', 'Reeder', 'TCL', 'GM'))
+        ('Apple', 'Samsung', 'Huawei', 'Mi', 'Oppo', 'realme', 'Reeder', 'TCL', 'General Mobile','POCO'))
 
     CPU = st.selectbox(
         'Select CPU -Ghz-:',
@@ -55,6 +55,12 @@ with features:
         'Select Screen Size -Inch-:',
         (4.25, 5.25, 6, 6.5, 10))
 
+pairs = {}               ## create a dictionary to convert the input brand names into the numerical values in the training.
+for k,v in zip(df1.Brand.unique(),np.arange(9)):
+    pairs[k] = v
+brand = pairs[brand]
+
+
 if brand == 'Apple':
     OS = 1
 else:
@@ -63,7 +69,7 @@ else:
 feat= np.array([brand,CPU,RAM,Storage,OS,Resolution,Size])
 
 if st.button('Calculate'):
-    pricex = model.predict(feat)
-    st.write('The estimated price of the device is:', pricex)
+    pricex = model.predict(np.float32(feat.reshape(1,-1)))
+    st.write('The estimated price of the device is:', pricex[0])
 
 
