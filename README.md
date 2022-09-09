@@ -15,6 +15,25 @@ I scraped data about the price, RAM, storage, CPU, screen size, color, camera re
 ![image](https://user-images.githubusercontent.com/105684729/187708339-99b12e54-fddc-4181-830b-6a4b94e35689.png)
 
 
+## Model Deployment
+
+After the model is tested, it is saved in a .sav file and the save file is used in the deployment process. The deployment is done on the streamlit API. The detailed code is present in the repository. Here is the final product.  
+[Application](https://yusufgulcan-smartphone-price-prediction-model-deployment-kr4n3c.streamlitapp.com/)
+
+![image](https://user-images.githubusercontent.com/105684729/189375183-b675cc74-2602-4c30-b675-e1c729fea4cb.png)
+
+
+## Libraries
+- XGBOOST 
+- CATBOOST
+- Pandas
+- Numpy
+- Streamlit
+- Matplotlib
+- Scikit-Learn
+- Pickle
+- Regular Expressions
+
 ## Further Improvements
 
 In this project, the data came from only one website. It would represent the market more if there were more data coming from other resources. If this is achieved, the model predictions approximates to the prices of all market. Also increase in the data size would help the model avoid overfitting. 
